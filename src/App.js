@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+// Setting Global State using useState
+import { useState } from 'react';
+// import { colorSelector } from './Components/colorSelector';
 
-function App() {
+const App = () => {
+  // This is our single source of truth, without using Redux -> We prop drill
+  const [color, setColor] = useState('red');
+
+  const handleRedClick = () => {
+    setColor('red');
+  };
+  const handleGreenClick = () => {
+    setColor('green');
+  };
+  const handleBlueClick = () => {
+    setColor('blue');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex-container'>
+      <div className='container'>
+        <button className='btn btn-red' onClick={handleRedClick}>
+          Red
+        </button>
+        <button className='btn btn-green' onClick={handleGreenClick}>
+          Green
+        </button>
+        <button className='btn btn-blue' onClick={handleBlueClick}>
+          Blue
+        </button>
+
+        <div style={{ color: color }}>The current color is {color}</div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
