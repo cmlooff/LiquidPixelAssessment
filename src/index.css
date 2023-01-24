@@ -9,8 +9,9 @@ body {
 
 }
 
-.flex-container{
+.flex-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 50vh;
@@ -27,29 +28,32 @@ body {
   margin: 5px;
 }
 
-.btn-red{
-background-color: red;
+.btn-red {
+  background-color: red;
 }
 
-.btn-blue{
+.btn-blue {
   background-color: blue;
 }
 
-.btn-green{
+.btn-green {
   background-color: green;
 }
 
-.navbar {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  position: fixed;
-  top: 0;
-  border-bottom: solid 1px #333;
+.btn:hover {
+  opacity: 0.8;
 }
 
 .circle {
-  
+  border-radius: 50%;
+  border: 2px solid;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin: 10px;
+  border-bottom: 2px solid black;
 }

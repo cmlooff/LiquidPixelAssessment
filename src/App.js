@@ -1,10 +1,10 @@
-// Setting Global State using useState
 import { useState } from 'react';
-import HeaderNav from './Component/HeaderNav';
+
+import Header from './Component/Header';
 
 const App = () => {
-  // This is our single source of truth, without using Redux -> We prop drill
   const [color, setColor] = useState('red');
+  const [size, setSize] = useState(160);
 
   const handleRedClick = () => {
     setColor('red');
@@ -16,9 +16,19 @@ const App = () => {
     setColor('blue');
   };
 
+  const handleSmallClick = () => {
+    setSize(80);
+  };
+  const handleMediumClick = () => {
+    setSize(160);
+  };
+  const handleLargeClick = () => {
+    setSize(240);
+  };
+
   return (
     <div className='flex-container'>
-      <HeaderNav />
+      <Header />
       <div className='container'>
         <button className='btn btn-red' onClick={handleRedClick}>
           Red
@@ -29,9 +39,28 @@ const App = () => {
         <button className='btn btn-blue' onClick={handleBlueClick}>
           Blue
         </button>
-
-        <div className='circle' style={{ color: color }}>
-          {color}
+        <br />
+        <button className='btn btn-small' onClick={handleSmallClick}>
+          Small
+        </button>
+        <button className='btn btn-medium' onClick={handleMediumClick}>
+          Medium
+        </button>
+        <button className='btn btn-large' onClick={handleLargeClick}>
+          Large
+        </button>
+        <br />
+        <div
+          className='circle'
+          style={{
+            color: color,
+            height: size,
+            width: size,
+            bordercolor: color
+          }}
+        >
+          {' '}
+          {size} {color}
         </div>
       </div>
     </div>
