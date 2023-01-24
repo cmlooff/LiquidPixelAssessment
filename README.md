@@ -21,3 +21,4 @@
     * I could've cropped the LiquidPixel demo photos and changed out the photos depending on the color selected.
         * This would've been handled by className logic
 3. I kept things as simple as possible to show case the logic rather than adding components that might've deviated from the MVP.
+4. Feel free to reach out and I could add additional features to the MVP to showcase anything else you might want to see.
