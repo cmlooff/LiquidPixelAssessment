@@ -1,12 +1,12 @@
 # LiquidPixelAssessment
 
-### Instructions
+### Instructions:
 1. Clone repo to local repo
 2. npm install
 3. npm start
 4. Click the buttons to change state!
 
-### Approach
+### Approach:
 1. Looking at the problem statement I found that the challenge was to show state change as instant visual information for the customer.
 2. Seeking to create an MVP product under a two hour sprint:
     * I chose React because I was comfortable with creating a stateful product under the sprint requisite.
@@ -14,7 +14,7 @@
     * I chose to pick two attributes - color and size.
     * Using these two attributes I created three buttons for each that changes the state of a simple div container that represents a circle. 
 
-### Talking Points
+### Talking Points:
 1. Going from the problem statement I created an MVP that I thought was suitable for the under two hour sprint.
 2. Going forward:
     * I could've added additional features like an active state for the buttons.
