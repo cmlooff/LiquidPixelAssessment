@@ -1,6 +1,6 @@
 // Setting Global State using useState
 import { useState } from 'react';
-// import { colorSelector } from './Components/colorSelector';
+import HeaderNav from './Component/HeaderNav';
 
 const App = () => {
   // This is our single source of truth, without using Redux -> We prop drill
@@ -18,6 +18,7 @@ const App = () => {
 
   return (
     <div className='flex-container'>
+      <HeaderNav />
       <div className='container'>
         <button className='btn btn-red' onClick={handleRedClick}>
           Red
@@ -29,7 +30,9 @@ const App = () => {
           Blue
         </button>
 
-        <div style={{ color: color }}>The current color is {color}</div>
+        <div className='circle' style={{ color: color }}>
+          {color}
+        </div>
       </div>
     </div>
   );
