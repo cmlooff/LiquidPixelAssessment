@@ -50,18 +50,18 @@ const App = () => {
           Large
         </button>
         <br />
-        <div
-          className='circle'
-          style={{
-            color: color,
-            height: size,
-            width: size,
-            bordercolor: color
-          }}
-        >
-          {' '}
-          {size} {color}
-        </div>
+      </div>
+      <div
+        className='circle'
+        style={{
+          color: color,
+          height: size,
+          width: size,
+          bordercolor: color
+        }}
+      >
+        {' '}
+        {size} {color}
       </div>
     </div>
   );
